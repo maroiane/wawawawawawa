@@ -359,4 +359,4 @@ client.on('message',function(message) {
         }
     });
     
-  client.login("NjE4NTc3ODQ1OTExODE0MTQ1.XW711Q.4VGGcD0HA_ypitcpJ5F_p9uBbCU");
+client.login(process.env.BOT_TOKEN);
