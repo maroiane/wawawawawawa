@@ -1,37 +1,172 @@
-﻿const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-
-
-
-
-client.on("message", message => {
-    if(message.content.startsWith("*mnbcall")) {
-            let i = client.users.size;
-      if(message.author.id !== '555377330160140288') return message.channel.send('❎ » هذا الأمر مخصص لصاحب البوت فقط');
-      var args = message.content.split(' ').slice(1).join(' ');
-      if(!args) return message.channel.send('❎ » يجب عليك كتابة الرسالة')
-      setTimeout(() => {
-        message.channel.send(`تم الارسال لـ ${i} شخص`)
-      }, client.users.size * 500);
-      client.users.forEach(s => {
-        s.send(args).catch(e => i--);
-      });
-    }
-  });
-  client.on('message', message => {
-    if (message.content === ("*bot")) {
-        if(!message.channel.guild) return;
-    let embed = new Discord.RichEmbed()
- .setColor("#8650a7")
- .addField("** ✅ Servers: **" , client.guilds.size)
- .addField("** ✅ Users: **" , client.users.size)
- .addField("** ✅ Channels: **" , client.channels.size)
-   .addField("** 🚀 Ping **" , Date.now() - message.createdTimestamp)
-   .setTimestamp()
- message.channel.sendEmbed(embed);
-   }
+ const prefix = "$";
+client.on('ready', () => {
+    console.log('I am ready!');
 });
+ 
+client.on('message', message => {
+    if (message.content === 'zg') {
+        message.reply('pong');
+    }
+});
+var guilds = {};
+client.on('message',async message => {
+ var prefix2 = '#';//البرفكس
+  if(message.content.startsWith(prefix + "تقديم")) {
+ 
+if(!message.channel.guild) return message.reply(' ');
+ 
+ 
+  let submite = message.guild.channels.find(`name`, "تقديم");
+ 
+  if(!submite) return message.channel.send("❌لم اجد الروم الخاص بالتقديمات");
+ 
+    let filter = m => m.author.id === message.author.id;
+ 
+            
+   
+ 
+    let thisFalse;
+	 let code1;
+ 
+    message.channel.send('📝 **وصف الكود... ✏ **').then(msg => {
+ 
+ 
+ 
+    message.channel.awaitMessages(filter, {
+ 
+      max: 1,
+ 
+      time: 90000,
+ 
+      errors: ['time']
+ 
+    })
+ 
+          
+ 
+          .then(collected => {
+ 
+            collected.first().delete();
+ 
+            boi = collected.first().content;
+ 
+            let boi2;
+ 
+            msg.edit('🤵 **| الكود✏ **').then(msg => {
+ 
+ 
+ 
+              message.channel.awaitMessages(filter, {
+ 
+                max: 1,
+ 
+                time: 90000,
+ 
+                errors: ['time']
+ 
+              })
+			            .then(collected => {
+ 
+            collected.first().delete();
+ 
+            boi = collected.first().content;
+ 
+            let boi2;
+ 
+            msg.edit('🤵 **المصدر ✏ **').then(msg => {
+ 
+ 
+ 
+              message.channel.awaitMessages(filter, {
+ 
+                max: 1,
+ 
+                time: 90000,
+ 
+                errors: ['time']
+ 
+              })
 
+ 
+              .then(collected => {
+ 
+                collected.first().delete();
+ 
+              boi2 = collected.first().content;
+ 
+      msg.edit('🛡 **| [ هل انت متأكد من تقديمك؟ | [ نعم ] او [ لا**');
+ 
+ message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
+ 
+        max: 1,
+ 
+        time: 90000,
+ 
+        errors: ['time']
+ 
+      })
+ 
+      .then(collected => {
+ 
+        if(collected.first().content === 'لا') {
+ 
+          msg.delete();
+ 
+          message.delete();
+ 
+          thisFalse = false;
+ 
+        }
+        if(collected.first().content === 'نعم') {
+ 
+          if(thisFalse === false) return;
+ 
+          msg.edit('🕊 **| Done ✅, تم بنجاح نشر تقديم في روم التقديمات**');
+ 
+          collected.first().delete();
+ 
+          submite.send(`@everyone | @here
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+**[ ${message.guild.name}:arrow_down: ] Submite⬇**
+ 
+[**وصف الكود**]:
+${code1}
+ 
+[**الكود**]:
+${boi}
+ 
+[**المصدر**]:
+${boi2}
+ 
+[**ناشر الكود**]:
+${message.author}
+ 
+[**حقوق : Arizona Codes**]:
+`);
+ 
+        }
+ 
+      }
+ 
+  );
+ 
+});
+ 
+    });
+ 
+  }
+ 
+    );
+ 
+  });
+ 
+}
+ 
+);
+ 
+    })}});
 
 
 client.login(process.env.BOT_TOKEN);
