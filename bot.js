@@ -133,7 +133,7 @@ if(!message.channel.guild) return message.reply(' ');
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 **[ ${message.guild.name}:arrow_down: ] Submite⬇**
  
-[**وصف الكود**]:
+[:Description:**وصف الكود**:Description:]:
 ${boi3}
  
 [**الكود**]:
@@ -142,7 +142,7 @@ ${boi}
 [**المصدر**]:
 ${boi2}
  
-[**ناشر الكود**]:
+[:Creator:**ناشر الكود**:Creator:]:
 ${message.author}
  
 [**حقوق : Arizona Codes**]:
