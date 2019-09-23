@@ -28,7 +28,9 @@ if(!message.channel.guild) return message.reply(' ');
    
  
     let thisFalse;
-	 let boi1;
+	              boi = collected.first().content;
+
+	 let bot1;
  
     message.channel.send('📝 **وصف الكود... ✏ **').then(msg => {
  
