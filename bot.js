@@ -30,21 +30,21 @@ if(!message.channel.guild) return message.reply(' ');
     let thisFalse;
 	          
 
-	 let bot1;
+	 let boi2;
  
     message.channel.send('📝 **وصف الكود... ✏ **').then(msg => {
  
  
  
-    message.channel.awaitMessages(filter, {
+              message.channel.awaitMessages(filter, {
  
-      max: 1,
+                max: 1,
  
-      time: 90000,
+                time: 90000,
  
-      errors: ['time']
+                errors: ['time']
  
-    })
+              })
  
           
  
@@ -134,7 +134,7 @@ if(!message.channel.guild) return message.reply(' ');
 **[ ${message.guild.name}:arrow_down: ] Submite⬇**
  
 [**وصف الكود**]:
-${bot1}
+${bot2}
  
 [**الكود**]:
 ${boi}
