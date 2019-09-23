@@ -30,7 +30,7 @@ if(!message.channel.guild) return message.reply(' ');
     let thisFalse;
 	          
 
-	 let boi2;
+	 let boi3;
  
     message.channel.send('📝 **وصف الكود... ✏ **').then(msg => {
  
@@ -134,7 +134,7 @@ if(!message.channel.guild) return message.reply(' ');
 **[ ${message.guild.name}:arrow_down: ] Submite⬇**
  
 [**وصف الكود**]:
-${boi2}
+${boi3}
  
 [**الكود**]:
 ${boi}
