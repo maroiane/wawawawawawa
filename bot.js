@@ -12,7 +12,6 @@ client.on('message', message => {
 });
 var guilds = {};
 client.on('message',async message => {
- var prefix2 = '#';//البرفكس
   if(message.content.startsWith(prefix + "js")) {
  
 if(!message.channel.guild) return message.reply(' ');
@@ -29,6 +28,7 @@ if(!message.channel.guild) return message.reply(' ');
  
     let thisFalse;
 	          
+            boi3 = collected.first().content;
 
 	 let boi3;
  
