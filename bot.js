@@ -31,7 +31,7 @@ if(!message.channel.guild) return message.reply(' ');
 
 	 let boi3;
  
-    message.channel.send('📝 **وصف الكود... ✏ **').then(msg => {
+    message.channel.send('📝 **اكتب اي شيء✏ **').then(msg => {
  
  
  
@@ -76,7 +76,7 @@ if(!message.channel.guild) return message.reply(' ');
  
             let boi2;
  
-            msg.edit('🤵 **المصدر ✏ **').then(msg => {
+            msg.edit('🤵 **الوصف ✏ **').then(msg => {
  
  
  
@@ -132,13 +132,13 @@ if(!message.channel.guild) return message.reply(' ');
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 **[ ${message.guild.name}:arrow_down: ] Submite⬇**
  
-[:Description:**وصف الكود**:Description:]:
-${boi3}
+[:Description:**حقوق Arizona & Codes**:Description:]:
+
  
 [**الكود**]:
 ${boi}
  
-[**المصدر**]:
+[**وصف الكود**]:
 ${boi2}
  
 [:Creator:**ناشر الكود**:Creator:]:
@@ -169,5 +169,13 @@ ${message.author}
  
     })}});
 
+client.on('message', message => {
+  if (message.channel.id === "625381303386243082") {
+    message.react('☑')
+      .then(() => {
+        message.react('🚫')
+      });
+  }
+}); 
 
 client.login(process.env.BOT_TOKEN);
