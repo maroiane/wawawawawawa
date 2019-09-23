@@ -134,7 +134,7 @@ if(!message.channel.guild) return message.reply(' ');
 **[ ${message.guild.name}:arrow_down: ] Submite⬇**
  
 [**وصف الكود**]:
-${bot2}
+${boi2}
  
 [**الكود**]:
 ${boi}
