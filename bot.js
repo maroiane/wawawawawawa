@@ -28,7 +28,6 @@ if(!message.channel.guild) return message.reply(' ');
  
     let thisFalse;
 	          
-            boi3 = collected.first().content;
 
 	 let boi3;
  
