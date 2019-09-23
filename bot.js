@@ -13,12 +13,12 @@ client.on('message', message => {
 var guilds = {};
 client.on('message',async message => {
  var prefix2 = '#';//البرفكس
-  if(message.content.startsWith(prefix + "تقديم")) {
+  if(message.content.startsWith(prefix + "js")) {
  
 if(!message.channel.guild) return message.reply(' ');
  
  
-  let submite = message.guild.channels.find(`name`, "تقديم");
+  let submite = message.guild.channels.find(`id`, "625381303386243082");
  
   if(!submite) return message.channel.send("❌لم اجد الروم الخاص بالتقديمات");
  
