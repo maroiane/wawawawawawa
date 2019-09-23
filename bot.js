@@ -28,7 +28,7 @@ if(!message.channel.guild) return message.reply(' ');
    
  
     let thisFalse;
-	              boi = collected.first().content;
+	          
 
 	 let bot1;
  
