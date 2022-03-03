@@ -17,7 +17,7 @@ client.on('message',async message => {
 if(!message.channel.guild) return message.reply(' ');
  
  
-  let submite = message.guild.channels.find(`id`, "625381303386243082");
+  let submite = message.guild.channels.find(`id`, "692151602282496030");
  
   if(!submite) return message.channel.send("❌لم اجد الروم الخاص بالتقديمات");
  
